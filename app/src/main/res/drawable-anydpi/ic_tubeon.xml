@@ -14,39 +14,46 @@
         android:fillColor="#000000"
         android:fillType="nonZero"/>
     <path
-        android:pathData="M4.4661,17.4636L7.9702,19.0379"
-        android:strokeLineJoin="undefined"
+        android:pathData="m7.1495,19.0535"
+        android:strokeAlpha="0.5"
         android:strokeWidth="1.5"
-        android:fillColor="#00000000"
+        android:fillColor="#fff"
         android:strokeColor="#000"
-        android:strokeLineCap="undefined"/>
+        android:fillAlpha="0.5"/>
     <path
-        android:pathData="M7.7765,12.1992L10.5506,14.8565"
-        android:strokeLineJoin="undefined"
+        android:pathData="M8.6676,18.3063L4.8582,16.7594"
+        android:strokeLineJoin="bevel"
         android:strokeWidth="1.5"
         android:fillColor="#00000000"
         android:strokeColor="#000"
-        android:strokeLineCap="undefined"/>
+        android:strokeLineCap="butt"/>
     <path
-        android:pathData="M12.1588,8.5973L14.1923,11.8564"
-        android:strokeLineJoin="undefined"
+        android:pathData="M10.9518,14.5895L7.7911,11.9601"
+        android:strokeLineJoin="bevel"
         android:strokeWidth="1.5"
         android:fillColor="#00000000"
         android:strokeColor="#000"
-        android:strokeLineCap="undefined"/>
+        android:strokeLineCap="butt"/>
     <path
-        android:pathData="M17.6031,6.3784L18.4985,10.1141"
-        android:strokeLineJoin="undefined"
+        android:pathData="M14.2332,11.6728L11.973,8.2383"
+        android:strokeLineJoin="bevel"
         android:strokeWidth="1.5"
         android:fillColor="#00000000"
         android:strokeColor="#000"
-        android:strokeLineCap="undefined"/>
+        android:strokeLineCap="butt"/>
     <path
-        android:pathData="M23.1564,5.8193L23.0004,9.6576"
-        android:strokeLineJoin="undefined"
+        android:pathData="M18.4246,9.842L17.4723,5.8423"
+        android:strokeLineJoin="bevel"
         android:strokeWidth="1.5"
         android:fillColor="#00000000"
         android:strokeColor="#000"
-        android:strokeLineCap="undefined"/>
+        android:strokeLineCap="butt"/>
+    <path
+        android:pathData="M23.3093,9.269L23.7216,5.1782"
+        android:strokeLineJoin="bevel"
+        android:strokeWidth="1.5"
+        android:fillColor="#00000000"
+        android:strokeColor="#000"
+        android:strokeLineCap="butt"/>
   </group>
 </vector>
