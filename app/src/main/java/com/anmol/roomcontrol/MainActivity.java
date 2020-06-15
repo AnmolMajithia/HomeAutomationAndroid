@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     protected void connectToNodeMCU(int val) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String ip = sharedPreferences.getString("ipAddr", "");
-        Log.d("gateeeem", "yay - " + ip);
+        //Log.d("gateeeem", "yay - " + ip);
         try {
             Socket socket = new Socket(ip, 6969);
             OutputStream outStream = socket.getOutputStream();
