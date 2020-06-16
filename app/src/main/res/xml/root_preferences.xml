@@ -4,10 +4,12 @@
         app:key="ipAddr"
         app:title="@string/signature_title"
         app:useSimpleSummaryProvider="true"
+        app:defaultValue="192.168.0.169"
         android:textColor="#ffffff" />
     <EditTextPreference
         app:key="port"
         app:title="Port"
         app:useSimpleSummaryProvider="true"
+        app:defaultValue="69"
         android:textColor="#ffffff" />
 </PreferenceScreen>
