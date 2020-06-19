@@ -6,7 +6,7 @@ NodeMCU / Arduino - ESP8266 Code at : https://github.com/AnmolMajithia/HomeAutom
 - 4 button layout
 - Works flawlessly with arduino code at above mentioned git repo
 - Sends hardcoded byte values to esp8266 or any reciever if IP and Port are entered in settings menu
-- Simple color change of button to state current state (on or off)
+- Simple color change of button to display current state (on or off)
 
 
 ### Future Ideas to Add :
