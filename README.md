@@ -10,10 +10,10 @@ NodeMCU / Arduino - ESP8266 Code at : https://github.com/AnmolMajithia/HomeAutom
 
 
 ### Future Ideas to Add :
-- [ ] Custom values to send to reciever for button ON and OFF, (in bytes or UTF based on option)
-- [ ] Custom icon adding to buttons
+- [ ] User defined values to send to reciever for button ON and OFF (in bytes or UTF based on option)
+- [ ] User defined icon adding to buttons
 - [ ] Themes
-- [ ] Multiroom multiprofile (different IPs or Ports or both) which would change the opening screen to room selector
+- [ ] Multiroom multiprofile options (different IPs or Ports or both) which would change the opening screen to room/profile selector
 
 
 *For any feature request or idea or suggestion contact me on the email provided in my bio*
