@@ -25,4 +25,4 @@ NodeMCU / Arduino - ESP8266 Code at : https://github.com/AnmolMajithia/HomeAutom
 
 ##### *Signed APK currently will give warning since I haven't registered myself on Google Play Store yet, you can hit 'Install Anyway' to continue*
 
-###### *For any feature request or idea or suggestion contact me on the email provided in my bio*
+###### *For any feature request, ideas or suggestion contact me on the email provided in my bio*
