@@ -23,5 +23,6 @@ NodeMCU / Arduino - ESP8266 Code at : https://github.com/AnmolMajithia/HomeAutom
 - [ ] Themes
 - [ ] Multiroom multiprofile options (different IPs or Ports or both) which would change the opening screen to room/profile selector
 
+*Signed APK currently will give warning since I haven't registered myself on Google Play Store yet, you can hit 'Install Anyway' to continue, the app is absolutely safe*
 
-*For any feature request or idea or suggestion contact me on the email provided in my bio*
+###### *For any feature request or idea or suggestion contact me on the email provided in my bio*
