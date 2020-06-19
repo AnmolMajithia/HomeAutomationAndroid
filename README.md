@@ -9,9 +9,7 @@ NodeMCU / Arduino - ESP8266 Code at : https://github.com/AnmolMajithia/HomeAutom
 - Simple color change of button to display current state (on or off)
 
 ### Screenshots
-<img src="https://i.imgur.com/eOoZc66.jpg" alt="SS1" width="250" />
-<img src="https://i.imgur.com/Qo6dZxk.jpg" alt="SS2" width="250" />
-<img src="https://i.imgur.com/5Ei9405.jpg" alt="SS3" width="250" />
+<img src="https://i.imgur.com/eOoZc66.jpg" alt="SS1" width="250" /> <img src="https://i.imgur.com/Qo6dZxk.jpg" alt="SS2" width="250" /> <img src="https://i.imgur.com/5Ei9405.jpg" alt="SS3" width="250" />
 
 ---
 
