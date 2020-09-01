@@ -95,41 +95,23 @@ public class MainActivity extends AppCompatActivity {
             mainLight.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
             mainLight.setImageResource(R.drawable.ic_tubeon);
         }
-        else {
-            mainLight.setBackgroundColor(Color.parseColor("#F44336")); // Pastel red
-            mainLight.setImageResource(R.drawable.ic_tubeoff);
-        }
         if (f) {
             fan.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
             fan.setImageResource(R.drawable.ic_fanon);
-        }
-        else {
-            fan.setBackgroundColor(Color.parseColor("#F44336")); // Pastel red
-            fan.setImageResource(R.drawable.ic_fanoff);
         }
         if (tl) {
             tableLamp.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
             tableLamp.setImageResource(R.drawable.ic_lampon);
         }
-        else {
-            tableLamp.setBackgroundColor(Color.parseColor("#F44336")); // Pastel red
-            tableLamp.setImageResource(R.drawable.ic_lampoff);
-        }
         if (sl) {
             secondaryLight.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
             secondaryLight.setImageResource(R.drawable.ic_bulbon);
         }
-        else {
-            secondaryLight.setBackgroundColor(Color.parseColor("#F44336")); // Pastel red
-            secondaryLight.setImageResource(R.drawable.ic_bulboff);
-        }
-
     }
 
     protected void connectToNodeMCU(int val) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String ip = sharedPreferences.getString("ipAddr", "192.168.0.169");
-        int port = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("port", "69")));
+        String ip = prefs.getString("ipAddr", "192.168.0.169");
+        int port = Integer.parseInt(Objects.requireNonNull(prefs.getString("port", "69")));
         try {
             Socket socket = new Socket(ip, port);
             OutputStream outStream = socket.getOutputStream();
