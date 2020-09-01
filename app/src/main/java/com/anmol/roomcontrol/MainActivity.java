@@ -1,8 +1,5 @@
 package com.anmol.roomcontrol;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.PreferenceManager;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -10,6 +7,9 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     boolean f;
     boolean tl;
 
+    SharedPreferences prefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,16 +39,20 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        ml = false;
-        sl = false;
-        f = false;
-        tl = false;
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
-        settingsButton = (ImageButton) findViewById(R.id.settings);
-        mainLight = (ImageButton) findViewById(R.id.mainLight);
-        secondaryLight = (ImageButton) findViewById(R.id.secondaryLight);
-        fan = (ImageButton) findViewById(R.id.fan);
-        tableLamp = (ImageButton) findViewById(R.id.tableLamp);
+        f = prefs.getBoolean("fan", false);
+        ml = prefs.getBoolean("main light", false);
+        sl = prefs.getBoolean("secondary light", false);
+        tl = prefs.getBoolean("table lamp", false);
+
+        settingsButton = findViewById(R.id.settings);
+        mainLight = findViewById(R.id.mainLight);
+        secondaryLight = findViewById(R.id.secondaryLight);
+        fan = findViewById(R.id.fan);
+        tableLamp = findViewById(R.id.tableLamp);
+
+        setColors();
 
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +90,42 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    protected void setColors() {
+        if (ml) {
+            mainLight.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
+            mainLight.setImageResource(R.drawable.ic_tubeon);
+        }
+        else {
+            mainLight.setBackgroundColor(Color.parseColor("#F44336")); // Pastel red
+            mainLight.setImageResource(R.drawable.ic_tubeoff);
+        }
+        if (f) {
+            fan.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
+            fan.setImageResource(R.drawable.ic_fanon);
+        }
+        else {
+            fan.setBackgroundColor(Color.parseColor("#F44336")); // Pastel red
+            fan.setImageResource(R.drawable.ic_fanoff);
+        }
+        if (tl) {
+            tableLamp.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
+            tableLamp.setImageResource(R.drawable.ic_lampon);
+        }
+        else {
+            tableLamp.setBackgroundColor(Color.parseColor("#F44336")); // Pastel red
+            tableLamp.setImageResource(R.drawable.ic_lampoff);
+        }
+        if (sl) {
+            secondaryLight.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
+            secondaryLight.setImageResource(R.drawable.ic_bulbon);
+        }
+        else {
+            secondaryLight.setBackgroundColor(Color.parseColor("#F44336")); // Pastel red
+            secondaryLight.setImageResource(R.drawable.ic_bulboff);
+        }
+
+    }
+
     protected void connectToNodeMCU(int val) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String ip = sharedPreferences.getString("ipAddr", "192.168.0.169");
@@ -103,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void mainLightToggle() {
         ml = !ml;
+        prefs.edit().putBoolean("main light", ml).apply();
         if (ml) {
             mainLight.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
             mainLight.setImageResource(R.drawable.ic_tubeon);
@@ -117,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void fanToggle() {
         f = !f;
+        prefs.edit().putBoolean("fan", f).apply();
         if (f) {
             fan.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
             fan.setImageResource(R.drawable.ic_fanon);
@@ -131,6 +175,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void tableLampToggle() {
         tl = !tl;
+        prefs.edit().putBoolean("table lamp", tl).apply();
         if (tl) {
             tableLamp.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
             tableLamp.setImageResource(R.drawable.ic_lampon);
@@ -145,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void secondaryLightToggle() {
         sl = !sl;
+        prefs.edit().putBoolean("secondary light", sl).apply();
         if (sl) {
             secondaryLight.setBackgroundColor(Color.parseColor("#009688")); //Pastel green
             secondaryLight.setImageResource(R.drawable.ic_bulbon);
